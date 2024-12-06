@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterFut - Jogos de Futebol Interativos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/logo/logo.png" alt="InterFut Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#games">Jogos</a></li>
+                <li><a href="#sorteios">Sorteios</a></li>
+                <li><a href="#campeonatos">Campeonatos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="logomark">
+                <img src="assets/logo/logomarca.png" alt="InterFut Logo">
+            </div>
+            <h1>InterFut</h1>
+            <p>Explore jogos interativos e divirta-se com futebol!</p>
+        </section>
+
+        <section id="games" class="game-catalog">
+            <h2>Catálogo de Jogos</h2>
+            <div class="card-container">
+                <div class="game-card">
+                    <img src="assets/pote.png" alt="Sorteador de Fase de Grupos">
+                    <h3>Sorteador de Fase de Grupos</h3>
+                    <p>Simule sorteios de grupos de campeonatos</p>
+                    <button onclick="openFaseGrupos()">Jogar</button>
+                </div>
+                <div class="game-card">
+                    <img src="assets/arena.png" alt="Montador de Escalação">
+                    <h3>Montador de Escalação</h3>
+                    <p>Monte seu time dos sonhos</p>
+                    <button onclick="openEscalacao()">Jogar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 InterFut - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

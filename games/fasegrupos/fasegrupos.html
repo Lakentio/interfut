@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterFut - Sorteador de Fase de Grupos</title>
+    <link rel="stylesheet" href="fasegrupos.css">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../../assets/logo/logo.png" alt="InterFut Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="../../index.html">Voltar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="sorteio-container">
+        <h1>Sorteador de Fase de Grupos</h1>
+        
+        <div class="potes-container">
+            <div class="pote">
+                <h3>Adicionar Time</h3>
+                <div class="times-input">
+                    <input type="text" id="nome-time" placeholder="Nome do time">
+                    <select id="pote-time">
+                        <option value="">Selecione o pote</option>
+                        <option value="1">Pote 1</option>
+                        <option value="2">Pote 2</option>
+                        <option value="3">Pote 3</option>
+                        <option value="4">Pote 4</option>
+                    </select>
+                    <button onclick="adicionarTime(
+                        document.getElementById('nome-time').value,
+                        document.getElementById('pote-time').value
+                    )">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="pote">
+                <h3>Pote 1</h3>
+                <ul id="lista-pote-1" class="lista-times"></ul>
+            </div>
+
+            <div class="pote">
+                <h3>Pote 2</h3>
+                <ul id="lista-pote-2" class="lista-times"></ul>
+            </div>
+
+            <div class="pote">
+                <h3>Pote 3</h3>
+                <ul id="lista-pote-3" class="lista-times"></ul>
+            </div>
+
+            <div class="pote">
+                <h3>Pote 4</h3>
+                <ul id="lista-pote-4" class="lista-times"></ul>
+            </div>
+        </div>
+
+        <button class="sortear-btn" onclick="sortearGrupos()">Realizar Sorteio</button>
+
+        <div id="grupos-container" class="grupos-container">
+            <!-- Os grupos serão inseridos aqui dinamicamente -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 InterFut - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="fasegrupos.js"></script>
+</body>
+</html>

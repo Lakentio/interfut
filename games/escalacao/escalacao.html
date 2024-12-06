@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterFut - Montador de Escalação</title>
+    <link rel="stylesheet" href="escalacao.css">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../../assets/logo/logo.png" alt="InterFut Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="../../index.html">Voltar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="escalacao-container">
+        <h1>Montador de Escalação</h1>
+        
+        <div class="controles">
+            <div class="formacao-selector">
+                <h3>Formação</h3>
+                <select onchange="mudarFormacao(this.value)">
+                    <option value="4-4-2">4-4-2</option>
+                    <option value="4-3-3">4-3-3</option>
+                    <option value="3-5-2">3-5-2</option>
+                    <option value="5-3-2">5-3-2</option>
+                    <option value="4-5-1">4-5-1</option>
+                </select>
+            </div>
+
+            <div class="jogador-input">
+                <h3>Adicionar Jogador</h3>
+                <input type="text" id="nome-jogador" placeholder="Nome do jogador">
+                <input type="number" id="numero-jogador" placeholder="Número" min="1" max="99">
+                <select id="posicao-jogador">
+                    <option value="">Selecione a posição</option>
+                    <option value="GOL">Goleiro</option>
+                    <option value="ZAG">Zagueiro</option>
+                    <option value="LD">Lateral Direito</option>
+                    <option value="LE">Lateral Esquerdo</option>
+                    <option value="VOL">Volante</option>
+                    <option value="MEI">Meio-Campo</option>
+                    <option value="ATA">Atacante</option>
+                </select>
+                <button onclick="adicionarJogador(
+                    document.getElementById('nome-jogador').value,
+                    document.getElementById('numero-jogador').value,
+                    document.getElementById('posicao-jogador').value
+                )">Adicionar</button>
+            </div>
+
+            <div class="lista-jogadores">
+                <h3>Jogadores Escalados</h3>
+                <ul id="lista-jogadores"></ul>
+            </div>
+        </div>
+
+        <div class="campo-container">
+            <div id="campo-futebol" class="campo-futebol">
+                <!-- As posições serão adicionadas dinamicamente aqui -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 InterFut - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="escalacao.js"></script>
+</body>
+</html>

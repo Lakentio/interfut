@@ -1,0 +1,165 @@
+.escalacao-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.controles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.formacao-selector,
+.jogador-input,
+.lista-jogadores {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #1edf1e33;
+    box-shadow: 0 2px 4px rgba(30, 223, 30, 0.1);
+}
+
+.formacao-selector select,
+.jogador-input input,
+.jogador-input select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #2a2a2a;
+    border: 1px solid #1edf1e33;
+    border-radius: 4px;
+    color: #e0e0e0;
+}
+
+.formacao-selector select option,
+.jogador-input select option {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+.jogador-input button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1edf1e;
+    color: #121212;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.jogador-input button:hover {
+    background-color: #9fff9f;
+}
+
+.lista-jogadores ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-jogadores li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color: #2a2a2a;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    color: #e0e0e0;
+    border: 1px solid #1edf1e33;
+}
+
+.lista-jogadores button {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.campo-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    aspect-ratio: 3/4;
+    padding: 20px;
+}
+
+.campo-futebol {
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    background-image: linear-gradient(#1a1a1a, #121212);
+    border-radius: 10px;
+    position: relative;
+    border: 2px solid #1edf1e;
+}
+
+.campo-futebol::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1edf1e33;
+}
+
+.campo-futebol::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border: 2px solid #1edf1e33;
+    border-radius: 50%;
+}
+
+.posicao-campo {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.numero-jogador {
+    width: 24px;
+    height: 24px;
+    background-color: #1edf1e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 5px;
+    color: #121212;
+    font-weight: bold;
+}
+
+.nome-jogador {
+    font-size: 12px;
+    background-color: rgba(30, 223, 30, 0.2);
+    padding: 2px 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+    color: #e0e0e0;
+}
+
+.posicao-vazia {
+    width: 24px;
+    height: 24px;
+    background-color: rgba(30, 223, 30, 0.2);
+    border: 1px solid #1edf1e33;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #1edf1e;
+}
